@@ -1,0 +1,13 @@
+Environment variable (Vercel > Settings > Environment Variables). Semua opsional, ada nilai bawaan.
+
+Key: PIN_HOST
+Value: nyr-tempmail-jultempmail.vercel.app
+
+Key: JULZ_BASE
+Value: https://www.julzaexce.my.id
+
+Key: JULZ_WORKER
+Value: https://julz-tempmail.julykomang985.workers.dev
+
+Key: JULZ_TIMEOUT
+Value: 15000
