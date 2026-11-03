@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYR Tempmail</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="/anti-clone.js" data-mode="guard"></script>
+</head>
+<body>
+<header class="topbar">
+  <h1>NYR Tempmail</h1>
+  <span class="badge">Email sementara</span>
+</header>
+<main class="layout">
+  <section class="panel" aria-labelledby="t-address">
+    <h2 id="t-address">Alamat Email</h2>
+    <div class="row">
+      <output id="address" class="address">Belum ada inbox</output>
+      <button id="btn-copy" class="btn" type="button" disabled>Salin</button>
+    </div>
+    <p id="expiry" class="meta"></p>
+    <form id="form-create" class="stack" novalidate>
+      <label for="name">Nama kustom (opsional, 5-16 huruf kecil/angka)</label>
+      <div class="row">
+        <input id="name" name="name" maxlength="16" autocomplete="off" autocapitalize="none" placeholder="contoh: nyrdev01">
+        <button class="btn btn-primary" type="submit">Buat Inbox</button>
+      </div>
+    </form>
+    <div class="row">
+      <button id="btn-refresh" class="btn" type="button" disabled>Segarkan</button>
+      <button id="btn-delete" class="btn btn-danger" type="button" disabled>Hapus Inbox</button>
+    </div>
+    <p id="status" class="status" role="status"></p>
+  </section>
+
+  <section class="panel" aria-labelledby="t-inbox">
+    <h2 id="t-inbox">Kotak Masuk <span id="count" class="badge">0</span></h2>
+    <ul id="list" class="message-list"></ul>
+    <p id="empty" class="empty">Belum ada pesan. Kirim email ke alamat di atas, daftar diperbarui otomatis tiap 10 detik.</p>
+  </section>
+
+  <section id="detail" class="panel" hidden aria-labelledby="d-subject">
+    <h2 id="d-subject"></h2>
+    <p id="d-meta" class="meta"></p>
+    <div id="d-body" class="body"></div>
+    <ul id="d-links" class="links"></ul>
+  </section>
+</main>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
